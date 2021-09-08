@@ -7,6 +7,9 @@ public class MainEstudiante1 {
 
 		System.out.println("valor del atributo estatico: "  + Estudiante1.pais);
 		System.out.println("valor del atributo estatico: "  + Estudiante1.provincia);
+		
+		
+		
 	}
 
 }
