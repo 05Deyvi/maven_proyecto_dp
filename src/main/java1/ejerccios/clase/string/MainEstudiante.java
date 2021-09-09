@@ -11,34 +11,41 @@ public class MainEstudiante {
 		String cedula = "";
 		Estudiante fila[] = new Estudiante [5];
 		
-		Estudiante deyvi= new Estudiante();
+		Estudiante estudiante1= new Estudiante();
 	
-		deyvi.setCedula(cedula);
-		deyvi.setNombre("deyvi");
+		estudiante1.setCedula(cedula);
+		estudiante1.setNombre("deyvi");
 		
-		Estudiante joel= new Estudiante();
-		joel.setCedula(cedula);
-		joel.setNombre("joel");
+		Estudiante estudiante2= new Estudiante();
+		estudiante2.setCedula(cedula);
+		estudiante2.setNombre("joel");
 		
-		Estudiante sofia = new Estudiante();
-		sofia.setCedula(cedula);
-		sofia.setNombre("sofia");
+		Estudiante estudiante3 = new Estudiante();
+		estudiante3.setCedula(cedula);
+		estudiante3.setNombre("sofia");
 		
-		Estudiante angel= new Estudiante();
-		angel.setCedula(cedula);
-		angel.setNombre("angel");
-		
-		
-		Estudiante marco = new Estudiante();
-		marco.setCedula(cedula);
-		marco.setNombre("marco");
+		Estudiante estudiante4= new Estudiante();
+		estudiante4.setCedula(cedula);
+		estudiante4.setNombre("angel");
 		
 		
+		Estudiante estudiante5 = new Estudiante();
+		estudiante5.setCedula(cedula);
+		estudiante5.setNombre("marco");
+		
+		
+		fila[0]=estudiante1;
+		fila[1]=estudiante2;
+		fila[2]=estudiante3;
+		fila[3]=estudiante4;
+		fila[4]=estudiante5; 
 		
 		int o = 0;
 		do {
 			
 			Scanner tecladoString = new Scanner(System.in);
+
+			
 			System.out.println("Bienvenido al sistema del Estudiante");
 			System.out.println("1. ingresar Estudiante");
 			System.out.println("2. Buscar Estudiante");
@@ -55,15 +62,22 @@ public class MainEstudiante {
 				System.out.println("ingrese cedula para la busqueda del estudiante ");	
 				 cedula = tecladoString.nextLine();
 				 
+				 
+		      String cedulaBuscar= cedula;
+			
+				 
 				 for(int i =0; i<5; i++) {
+					 
 					 Estudiante estudiante = fila[i];
 					 String cedulaObtenida=estudiante.getCedula();
-					 if(cedula.equals(cedulaObtenida)) {
-						 System.out.println("el estudiante  ha sido guardado");
-						 int opcionguardar=0;
-						 opcionguardar++;
+					 boolean respuestaLocal = cedulaBuscar.equals(cedulaObtenida);
+					if(respuestaLocal == true) {
+						 boolean respuesta = true;
+						 
+						 System.out.println("el estudiante  ha sido encontrado");
+						 
 					 }else {
-						 System.out.println("el estudiante no ha sido guardado");
+						 System.out.println("el estudiante no ha sido encontrado");
 					 }
 				 }
 
