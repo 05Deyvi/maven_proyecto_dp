@@ -50,6 +50,13 @@ public class Paciente implements Comparable<Paciente>{
 		
 	
 }
+	@Override
+	public String toString() {
+		return "Empleados [nombre=" + nombre + ", apellido=" + apellido + ", dolor=" + dolor + ", edad=" + edad
+				+ "]";
+	}
+
+	
 	
 	
 	}
